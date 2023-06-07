@@ -5,7 +5,7 @@ caminhoSH=$(realpath "scriptCron.sh")
 caminhoLOG=$(realpath "crontab.log")
 echo $caminhoSH
 echo $caminhoLOG
-echo "* * * * * $caminhoSH >> $caminhoLOG " > cron_temp.txt
+echo "*/5 * * * * $caminhoSH >> $caminhoLOG " > cron_temp.txt
 
 # Carregue o arquivo de crontab
 crontab cron_temp.txt
